@@ -1,7 +1,11 @@
 #ifndef OHBOT_JSONPARSER_H_
 #define OHBOT_JSONPARSER_H_
 
-#include "includes.h"
+#include "jsonParser.h"
+#include <string>
+#include<map>
+
+using namespace std;
 
 class JSONParser
 {
@@ -12,8 +16,8 @@ public:
   ~JSONParser();
   JSONParser(JSONParser &) = delete;
 
-  std::map<std::string, std::string> parseJSON(std::string &data);
-  std::string generateJSON(std::map<std::string, std::string> &data);
+  map<string, string> parseJSON(string &data);
+  string generateJSON(map<string, string> &data);
 };
 
 #endif //OHBOT_JSONPARSER_H_
